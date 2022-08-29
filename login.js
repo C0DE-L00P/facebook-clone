@@ -1,22 +1,18 @@
 // ------------------- Check if the user account can be found in the database -----------------//
 
-document
-  .getElementById("in_email_phone_login")
-  .addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      console.log("triggered");
-      pass.focus();
-    }
-  });
-document
-  .getElementById("in_password_login")
-  .addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      loginUser();
-    }
-  });
+document.getElementById("in_email_phone_login").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    console.log('triggered')
+    pass.focus()
+  }
+})
+document.getElementById("in_password_login").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    loginUser()
+  }
+});
 
 function loginUser() {
   let email = document.getElementById("in_email_phone_login");
@@ -47,17 +43,7 @@ function loginUser() {
   //   open("login_int.html", "_self");
   // } else if (userState == 1) {
   //   window.location.replace("verify.html");
-  // } else
-  
-  if (userState != 2)
-    saveUserDataInCookie(
-      email,
-      "Guest",
-      "Guest",
-      "Visitor",
-      "../resources/fb_starter_img.jpg",
-      12332
-    );
+  // } else 
   window.location.replace("main_frame.html");
 }
 
